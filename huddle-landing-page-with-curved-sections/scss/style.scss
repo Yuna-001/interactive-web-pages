@@ -125,9 +125,13 @@ main {
 }
 
 .stat {
+  position: relative;
   display: flex;
+  top: 2rem;
   flex-direction: column;
   align-items: start;
+  opacity: 0;
+  transition: all 1s;
 
   img {
     width: 2rem;
@@ -147,6 +151,11 @@ main {
     margin-top: 5px;
     font-size: 1rem;
   }
+}
+
+.visible {
+  opacity: 1;
+  top: 0;
 }
 
 /* feature */
@@ -198,6 +207,21 @@ main {
 
   h2 {
     font-size: 2.5rem;
+    height: 85px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cta-btn {
+    opacity: 0;
+    position: relative;
+    top: 1rem;
+    transition: all 1.5s;
+
+    &.visible {
+      opacity: 1;
+      top: 0;
+    }
   }
 }
 
